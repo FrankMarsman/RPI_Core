@@ -1,6 +1,7 @@
-# PI Status Monitor
+# pi_status_monitor.py code
 
-# Updated log directory
-log_directory = '/home/pi/C/logs'
+# ... existing code ...
 
-# Rest of the file contents remain unchanged
+LOG_DIRECTORY = '/home/pi/C/logs'  # updated log directory
+
+# ... remaining code ...
