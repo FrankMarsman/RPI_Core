@@ -16,10 +16,17 @@ def write_online_status():
     ensure_log_directory()
     
     # Main loop
+    counter = 0
     while True:
         try:
             # Get current timestamp
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            if counter == 0:
+                with open(log_file, "a") as f:
+                    f.write(f"[{timestamp}] PI REBOOTED AND IS ONLINE\n")
+                    
+            counter = counter + 1
             
             # Write to log file
             with open(log_file, "a") as f:
